@@ -1,0 +1,14 @@
+{
+    "python.formatting.provider": "none",
+
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.formatOnSave": true,
+
+    "ruff.organizeImports": true,
+
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+
+    "ruff.format.args": ["--line-length", "120"]
+}
