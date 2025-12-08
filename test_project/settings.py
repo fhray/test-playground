@@ -83,14 +83,25 @@ WSGI_APPLICATION = "test_project.wsgi.application"
 #     }
 # }
 
-database_url = os.getenv("DB-CONNECTION-STRING")
 DATABASES = {
-    "default": dj_database_url.config(
-        default=database_url,
-        conn_max_age=600,
-        conn_health_checks=True,
-    )
+    "default": {
+        "ENGINE": "django.db.backends.postgresql",
+        "NAME": "django",
+        "USER": "db_user",
+        "PASSWORD": "password",
+        "HOST": "localhost",
+        "PORT": "5432",
+    }
 }
+
+# database_url = os.getenv("DB-CONNECTION-STRING")
+# DATABASES = {
+#     "default": dj_database_url.config(
+#         default=database_url,
+#         conn_max_age=600,
+#         conn_health_checks=True,
+#     )
+# }
 
 
 # Password validation
